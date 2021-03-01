@@ -1,0 +1,1023 @@
+<p style="text-align: center;"><b>The whole application process contains 5 sections and should take about 30-45 minutes. A great journey awaits you!</b></p>
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Self and Family</ng-template>
+      <p style="text-align: center;">Please fill in your family members before moving onto the next section of the application.</p>
+      <table style="width: 1450px;" id="table">
+        <tr>
+          <th>Relation</th>
+          <th>Current Age or Age Death</th>
+          <th>Living or Deceased</th>
+          <th>Cause of Death</th>
+          <th>Ethnic Origin</th>
+          <th>Any Genetic Diseases</th>
+          <th>History of Substance Abuse</th>
+          <th>Medical Conditions</th>
+        </tr>
+        <tr>
+          <th>Self</th>
+          <td><input matInput formControlName="self_age" maxlength="500" required></td>
+          <td><input matInput formControlName="self_living" maxlength="500" required></td>
+          <td><input matInput formControlName="self_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="self_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="self_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="self_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="self_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Father</th>
+          <td><input matInput formControlName="father_age" maxlength="500" required></td>
+          <td><input matInput formControlName="father_living" maxlength="500" required></td>
+          <td><input matInput formControlName="father_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="father_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="father_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="father_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="father_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Mother</th>
+          <td><input matInput formControlName="mother_age" maxlength="500" required></td>
+          <td><input matInput formControlName="mother_living" maxlength="500" required></td>
+          <td><input matInput formControlName="mother_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="mother_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="mother_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="mother_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="mother_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Maternal Grandfather</th>
+          <td><input matInput formControlName="maternal_grandfather_age" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandfather_living" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandfather_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandfather_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandfather_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandfather_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="maternal_grandfather_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Maternal Grandmother</th>
+          <td><input matInput formControlName="maternal_grandmother_age" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandmother_living" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandmother_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandmother_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandmother_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="maternal_grandmother_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="maternal_grandmother_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Paternal Grandfather</th>
+          <td><input matInput formControlName="paternal_grandfather_age" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandfather_living" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandfather_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandfather_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandfather_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandfather_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="paternal_grandfather_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Paternal Grandmother</th>
+          <td><input matInput formControlName="paternal_grandmother_age" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandmother_living" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandmother_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandmother_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandmother_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="paternal_grandmother_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="paternal_grandmother_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Sibling 1</th>
+          <td><input matInput formControlName="sibling1_age" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling1_living" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling1_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling1_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling1_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling1_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="sibling1_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Sibling 2</th>
+          <td><input matInput formControlName="sibling2_age" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling2_living" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling2_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling2_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling2_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="sibling2_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="sibling2_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Add More Sibling</th>
+          <td><input matInput formControlName="more_sibling_age" maxlength="500" required></td>
+          <td><input matInput formControlName="more_sibling_living" maxlength="500" required></td>
+          <td><input matInput formControlName="more_sibling_cause" maxlength="500" required></td>
+          <td><input matInput formControlName="more_sibling_ethnic" maxlength="500" required></td>
+          <td><input matInput formControlName="more_sibling_genetic" maxlength="500" required></td>
+          <td><input matInput formControlName="more_sibling_history" maxlength="500" required></td>
+          <td>
+            <mat-select formControlName="more_sibling_medic" required>
+              <mat-option value="N/A">N/A</mat-option>
+              <mat-option value="Blood">Blood</mat-option>
+              <mat-option value="Heart">Heart</mat-option>
+              <mat-option value="Respiratory">Respiratory</mat-option>
+              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
+              <mat-option value="Metabolic">Metabolic</mat-option>
+              <mat-option value="Urinary">Urinary</mat-option>
+              <mat-option value="Reproductive">Reproductive</mat-option>
+              <mat-option value="Neurological">Neurological</mat-option>
+              <mat-option value="Mental Health">Mental Health</mat-option>
+              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
+              <mat-option value="Skin Condition">Skin Condition</mat-option>
+              <mat-option value="Others">Others</mat-option>
+            </mat-select>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <p>
+        Notes: <br>
+        1. If you don't know the answer to certain questions, please select N/A. <br>
+        2. If you select any medical for yourself or your close family members, please explain here. <br>
+        3. Explain if the person deceased at the age of 65 or younger.
+      </p>
+      <br>
+      <mat-label>Please explain: </mat-label><br>
+      <mat-form-field appearance="outline">
+        <mat-label>Please explain</mat-label>
+        <textarea matInput formControlName="explain" maxlength="5000"></textarea>
+      </mat-form-field>
+      <br>
+    </form>
+    <div style="text-align: center;" class="button-row">
+      <button mat-raised-button color="primary" (click)="save()">SAVE <mat-icon>save</mat-icon></button>
+      <button mat-raised-button color="warn" matStepperNext>NEXT <mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>FDA</ng-template>
+      <table>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>1. Have you received non-medical intravenous, intramuscular, or subcutaneous injection of drugs not prescribed by a licensed physician for medical purposes? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="non_medical_drugs" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>2. Have you received a tattoo (regular or black light), had a tattoo altered or removed, had cosmetic scarring or branding, or received acupunture, ear piercing or body piercing in which <b><u>sterile penetration</u></b> or procedures were <b><u>not used</u></b> (or which involved the use of <b><u>shared/non-sterilized instruments</u></b> between each use or <b><u>contaminated instruments and/or ink</u></b>) in the preceding 12 months, or 12 months prior to a donation? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="tattoos" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>3. Have you being diagnosed with hemophilia or related clotting disorders and received human-derived clotting factor concentrates? (e.g., Non-viral inactivated Factor VIII or Factor IX concentrate) </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="clotting" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>4. Have you engaged in sex in exhange for money or drugs at any time since 1977? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="sexual_activity" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>5. Have you had sex in the past 12 months with a person described in questions #1-4 above or with a man who has had sex with another man (anal or oral), even once, since 1977? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="sex_1_4" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>6. Have you had sex in the past 12 months with any person known to be infected with, is at high risk for, or who has tested positive/reactive for, HIV, Hepatisis B (HBV), active Hepatisis C (HCV) or Human T-cell Lymphotropic Virus (HTLV)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="sex_12" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              7. Have you shown evidence of HIV infection, or does your history or any medical records or pathology report reveal high-risk behaviours such as: <font color=red>*</font><br>
+              <ul>
+                <li>A positive test for HIV</li>
+                <li>A diagnosis of Acquired Immuno-Deficiency Syndrome (AIDS) or HIV</li>
+                <li>Unexplained weight loss</li>
+                <li>Night sweats</li>
+                <li>Blue or purple shots on the skin or mucous membranes typical of Kaposi's sarcoma</li>
+                <li>Unexplained lymphadenopathy (enlarged glands) lasting more than one month</li>
+                <li>Unexplained temperature greater than 100.5 degrees F (38.6 C) for more than ten days</li>
+                <li>Unexplained persistent cough and shortness of breath</li>
+                <li>Opportunistic infections</li>
+                <li>Unexplained persistent diarrhea</li>
+                <li>Needle tracks or other signs of parenteral drug use?</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="HIV_infection" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>8. Are you a chronic HBV or HCV carrier, do you have a history of Hepatisis or have you been diagnosed with Hepatisis of unknown etiology or active viral Hepatisis (which was not later identified to be caused by Hepatisis A, Epstein-Barr Virus or Cytomegalovirus)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="chronic" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>9. Have you lived in the same dwelling as a person described in question #8 in the past 12 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="dwelling" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>10. Have you been exposed to blood or body fluids through percutaneous inoculation (e.g. needle stick) or through contact with an open wound, non-intact skin, or mucous membrane in the preceding 12 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="exposed" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>11. Have you ever been exposed to suspected or known HIV, HBV, HCV or HTLV-infected blood or body fluids in the manner described in question #10? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="suspected" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>12. Have you or your sexual partner received blood, blood components, blood products or other human tissues in the preceding 12 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="received_blood" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              13. Do you have a history of reactive or positive screening for: <font color=red>*</font><br>
+              <ul>
+                <li>HIV</li>
+                <li>HBC</li>
+                <li>HCV</li>
+                <li>Antibodies to HIV-1 HIV-2</li>
+                <li>Hepatisis B surface antigen (HBsAg)</li>
+                <li>Antibody to Hepatisis B core (HBc)</li>
+                <li>Antibody to Hepatisis C</li>
+                <li>Antibody to HTLV-I or HTLV-II</li>
+              </ul>
+              <span style="margin-left: 20px;">regardless of the results of supplemental assays?</span>
+            </mat-label>
+            <br><br>
+            <mat-radio-group formControlName="history_positive" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>14. Have you used intra-nasal cocaine in the preceding 12 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="cocaine" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>15. Have you had a sexual encounter in the preceding 12 months with someone whose sexual background you are unsure of? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="unsure" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>16. Do you have a history of alcoholism or alcohol abuse? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="Alcoholism" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>17. Have you been in juvenile detention/correctional facility, lock up, prison or jail in the past 12 months for 72 consecutive hours or longer? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="juvenile" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>18. Have you had sex with a person in the preceding 12 months described in question #17? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="sex" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>19. Have you been treated for, tested positive for or diagnosed with gonorrhea, chlamydia or syphilis in the preceding 12 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="Gonorrhea" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>20. Have you had a partner who has had positive cultures for Trichomonas? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="Trichomonas" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>21. Do you have a history of genital Herpes Simplex Virus (HSV) type 1 or 2? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="HSV" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              22. Have you exhibited any of the following  conditions at the time of donation, which may contaminate your donation? <font color=red>*</font><br>
+              <ul>
+                <li>Genital ulcer</li>
+                <li>Genital warts (papillomavirus)</li>
+                <li>Urethral discharge or infectious skin disease</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="contaminate" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>23. Have you been permanently excluded or deferred from donating vlood or plasma? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="deferred" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>24. Have you been diagnosed with any form of Creutzfeldt - Jakob disease (CJD), spongiform encephalopathy or prion disease, or do you have a blood relative with a history of CJD? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="Creutzfeldt" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>25. Have you received human pituitary-derived growth hormone or transplants of human dura mater? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="pituitary_derived" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              26. Between 1980 and 1996, have you spent a total of: <font color=red>*</font><br>
+              <ul>
+                <li>3 months or more living or travelling in the United Kingdom (England, Northern Ireland, Scotland, Wales, the Isle of Man, the Channel Islands, Gibraltar and the Falkland Islands)? OR</li>
+                <li>6 months or more residing at a U.S. military base in Greece, turkey, Spain, Portugal or Italy?</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="spent" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>27. Between 1980 and 1990, have you spent a total of 6 months or more residing at a U.S. military base in Northern Europe (Germany, Belgium or the Netherlands)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="spent_Northern_Europe" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              28. From 1980 until the present day, have you spent a total of 5 or more years:  <font color=red>*</font><br>
+              <ul>
+                <li>In Europe (Albania, Austria, Belgium, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Leichtensein, Luxembourg, Macedonia, Netherlands, Norway, Poland, Portugal, Romania, Solvak Republic, Slovenia, Spain, Sweden, Switzerland, United Kingdom (see list of countries below), and Yugoslavia)? OR</li>
+                <li>Received any tranfusion of blood, blood components or blood products in the United Kingdom (England, Northern Ireland, Scotland, Wales, the Isle of Man, the Channel Islands, Gibraltar and the Falkland Islands) or France?</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="spent_more_years" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+              29. In the past 120 days (4 months), have you:  <font color=red>*</font><br>
+              <ul>
+                <li>Been told by a health care professional that you were known or suspected of having a West Nile Virus (WNV) infection? OR</li>
+                <li>Been medically diagnosed with WNV based on symptoms, laboratory results (including WNV antibody testing), or confirmed viremia? OR</li>
+		            <li>Tested positive or reactive for WNV using a FDA-licensed or invertigational NAT donor screening assay (NAT is a test method that identifies viral DNA in your blood)? OR</li>
+                <li>Shown evidence of West Nile Virus (WNV) infection such as:</li>
+                <ul>
+                  <li>High fever, headache, body aches or eye pain; skin rash on the trunk of the body; or swollen lymph glands? OR</li>
+                  <li>Encephalitis, meningitis, meningoencephalitis and acute flaccid paralysis; neck stiffness, stuper, disorientation, coma, tremors, convulsions and muscle weakness or paralysis?</li>
+                </ul>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="past_120" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>30. Have you, or a person with whom you have had close contact or lived in the same residence, been the receipent of cells, tissues ororgans from a non-human source (xenotransplantation)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="close_contact_xenotransplantation" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>31. Do you have, or are you at risk for malaria? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="malaria" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>32. In the preceding 12 months have you been vaccinated or immunized for any reason? (Including Hepatisis B and/or Smallpox)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="immunized" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>33. Have you had close contact (defined as the exchange of body fluids, including saliva) with a receipent of the Smallpox vaccine within 21 days of vaccination, or contact with the scab at the site of immunization or anything touching the scab (e.g. bedding, towels, bandages)? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="smallpox" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+               34. Have you been diagnosed with any of the following: <font color=red>*</font><br>
+              <ul>
+                <li>Active encephalitis ot meningitis of viral or unknown origin</li>
+                <li>Dementia</li>
+		            <li>Degenerative or demyelinating diseases of the central nervous system or other neurological diseases of unknown origin</li>
+                <li>Infectious neurological disease</li>
+                <li>Major systemic or autoimmune diseases, including systematic malignancies?</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="diagnosed_following" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>
+               35. Have you or a family member been diagnosed with: <font color=red>*</font><br>
+              <ul>
+                <li>Major genetic disorders (including autosomal recessive disorders, autosamal or X-linked disorders for which age of onset extends beyond the age of the affected, or autosamal disorders with reduced penetrance) OR</li>
+                <li>Major malformations of complex cause that result in serious functional or cosmetic defects, including but not limited to spina bifida or heart malformations?</li>
+              </ul>
+            </mat-label>
+            <mat-radio-group formControlName="family_diagnosed" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>36. Have you received a bite from an animal suspected of carrying rabies within the preceding 6 months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="received_bite" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>37. Have you been exposed to, or been at increased risk of exposure to, radiation, chemicals, or toxic amounts of lead, mercury or gold? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="exposed_radiation" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>38. Do you have known or suspected sepsis currently or at the time of any donation? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="suspected_sepsis" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>39. Are you or any of your family members employed by Fairfax EggBank, Genetics & IVF institute, or a contracted facility? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="family_employed" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>40. Have you shown evidence of Hepatisis infection, such as: unexplained jaundice, unexplained hepatomegaly; and/or past diagnosis of clinical, symptomatic viral hepatisis? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="evidence_infection" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>41. Do you have a history of sexually transmissible disease(s) not mentioned in this document? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="history_transmissible" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>42. Are you willing to be tested for infectious disease agents? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="tested_infectious" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>43. Have you had a transfusion or received blood or blood products within the last year? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="blood_transfusion" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>44. Have you had more than one sexual partner during the last six months? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="sexual_partner" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>45. Have you been previously excluded from blood donation? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="excluded_blood_donation" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+        <tr>
+          <div class="add-bottom-padding">
+            <mat-label>46. have you or any of your first or second degree relatives had any changes to medical history? </mat-label><font color=red>*</font><br><br>
+            <mat-radio-group formControlName="relatives_medical_history" required>
+                <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
+                <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </tr>
+        <br>
+      </table>
+    </form>
+    <div style="text-align: center;" class="button-row">
+      <button mat-raised-button color="warn" matStepperPrevious><mat-icon>arrow_back_ios</mat-icon> BACK</button>
+      <button mat-raised-button color="primary" (click)="save()">SAVE <mat-icon>save</mat-icon></button>
+      <button mat-raised-button color="warn" matStepperNext>NEXT <mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Personal Explorer</ng-template>
+      <p style="text-align: center;">You are almost there! This section usually takes about up to 10 minutes to complete. The information provided in this section will help us determine if you are eligible for compensation <b>premium</b>.</p>
+      <br>
+      <mat-label>1. Why do you want to be a donor? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Why do you want to be a donor?</mat-label>
+        <textarea matInput formControlName="reason_egg_donor" maxlength="5000"></textarea>
+        <mat-error *ngIf="thirdFormGroup.controls['reason_egg_donor'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>2. What do you want to say to intended parents? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>What do you want to say to intended parents?</mat-label>
+        <textarea matInput formControlName="say_intended_parents" maxlength="5000"></textarea>
+        <mat-error *ngIf="thirdFormGroup.controls['say_intended_parents'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>3. What is your personal/professional goal? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>What is your personal/professional goal?</mat-label>
+        <textarea matInput formControlName="personal_goal" maxlength="5000"></textarea>
+        <mat-error *ngIf="thirdFormGroup.controls['personal_goal'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>4. Please highlight your achievement academically/in musical field/sports/social skill/leadership/Other talents. </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Please highlight your achievement academically/in musical field/sports/social skill/leadership/Other talents</mat-label>
+        <textarea matInput formControlName="achievement" maxlength="5000"></textarea>
+        <mat-error *ngIf="thirdFormGroup.controls['achievement'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>5. Have you helped people in your neighbourhood/community? Tell us more. </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Have you helped people in your neighbourhood/community? Tell us more</mat-label>
+        <textarea matInput formControlName="helped_community" maxlength="5000"></textarea>
+        <mat-error *ngIf="thirdFormGroup.controls['helped_community'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+    </form>
+    <div style="text-align: center;" class="button-row">
+      <button mat-raised-button color="warn" matStepperPrevious><mat-icon>arrow_back_ios</mat-icon> BACK</button>
+      <button mat-raised-button color="primary" (click)="save()">SAVE <mat-icon>save</mat-icon></button>
+      <button mat-raised-button color="warn" matStepperNext>NEXT <mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="forthFormGroup">
+    <form [formGroup]="forthFormGroup">
+      <ng-template matStepLabel>Psychological Evaluation</ng-template>
+      <p style="text-align: center;">This is the last part of the questionnaire! We just want to make sure you have thought it through. This section usually takes about up to 10 min to complete.</p>
+      <br>
+      <mat-label>1. Are you comfortable with anonymous egg donation? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Are you comfortable with anonymous egg donation?</mat-label>
+        <textarea matInput formControlName="anonymous_donation" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['anonymous_donation'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>2. Do you understand that as an egg donor you will pass a portion of your genetic material to a child (while remaining anonymous)? Are you comfortable with this? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Do you understand that as an egg donor you will pass a portion of your genetic material to a child (while remaining anonymous)? Are you comfortable with this?</mat-label>
+        <textarea matInput formControlName="understand" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['understand'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>3. How do you feel about families struggling with infertility? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>How do you feel about families struggling with infertility?</mat-label>
+        <textarea matInput formControlName="families_infertility" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['families_infertility'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>4. If you incur infertility in the future, how would you deal with it? </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>If you incur infertility in the future, how would you deal with it?</mat-label>
+        <textarea matInput formControlName="deal_infertility" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['deal_infertility'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>5. Describe your personality & social demeanor. </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Describe your personality & social demeanor</mat-label>
+        <textarea matInput formControlName="describe_personality" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['describe_personality'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>6. Please share a detailed explanation of you and your family regarding any pertinent psychological information. </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Please share a detailed explanation of you and your family regarding any pertinent psychological information</mat-label>
+        <textarea matInput formControlName="explanation_psychological" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['explanation_psychological'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-label>7. Do you or your immediate family members have a history of abuse (sexual/physical/mental abuse) or mental illness that would prevent you from becoming an egg donor. If so, please describe. </mat-label><font color=red>*</font><br>
+      <mat-form-field class="add-margin-left" appearance="outline">
+        <mat-label>Do you or your immediate family members have a history of abuse (sexual/physical/mental abuse) or mental illness that would prevent you from becoming an egg donor. If so, please describe</mat-label>
+        <textarea matInput formControlName="history_abuse" maxlength="5000"></textarea>
+        <mat-error *ngIf="forthFormGroup.controls['history_abuse'].errors?.required">This field is required.</mat-error>
+      </mat-form-field>
+      <br>
+    </form>
+    <div style="text-align: center;" class="button-row">
+      <button mat-raised-button color="warn" matStepperPrevious><mat-icon>arrow_back_ios</mat-icon> BACK</button>
+      <button mat-raised-button color="primary" (click)="save()">SAVE <mat-icon>save</mat-icon></button>
+      <button mat-raised-button color="warn" matStepperNext>NEXT <mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="fifthFormGroup">
+    <form [formGroup]="fifthFormGroup">
+      <ng-template matStepLabel>Photos and Video</ng-template>
+        <ul>
+          <li>It is the last step!</li>
+          <li>We need your photos and videos to better present you. You can upload photos and videos taken both at your childhood, young adult and most recently.</li>
+          <li>We would love to present the best of you to intended parents.</li>
+          <li>The more the merrier! Our statistics suggests that more high-quality photos can increase the <b>premium</b> significantly!</li>
+        </ul>
+        <div style="text-align: center;">
+          <img [src]="imgSrc" width="250px" height="130px" (click)="photoUpload.click()">
+          <br>
+          <mat-label><font color=red>Please upload at least 5 photos to complete the application</font></mat-label><br><br>
+          <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple>
+          <img *ngFor="let url of urls" [src]="url" width="200px" height="150px">
+          <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
+        </div>
+        <br>
+        <ul>
+          <li>A simple selfie video up to 3 minutes long can help intended parents to know your better. You can share your work/study, your daily routine, your favourite sports, etc.</li>
+          <li>You can start with: <b>Hi, My name is ***. I am a ***. ... My day starts with ***. ...</b></li>
+          <li>Note: Video is optional.</li>
+        </ul>
+        <div style="text-align: center;">
+          <img [src]="vidSrc" width="250px" height="130px" (click)="videoUpload.click()">
+          <br>
+          <mat-label><font color=red>Please upload at least 1 video to complete the application</font></mat-label><br><br>
+          <input style="display: none;" type="file" accept="video/*" formControlName="videoUrl" #videoUpload (change)="selectVideos($event)">
+          <img *ngFor="let Vurl of Vurls" [src]="Vurl" width="200px" height="150px">
+          <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
+        </div>
+        <br>
+    </form>
+    <div style="text-align: center;" class="button-row">
+      <button mat-raised-button color="warn" matStepperPrevious><mat-icon>arrow_back_ios</mat-icon> BACK</button>
+      <button mat-raised-button color="primary" (click)="save()">SAVE <mat-icon>save</mat-icon></button>
+      <button mat-raised-button color="warn" matStepperNext>NEXT <mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="sixthFormGroup">
+    <form style="text-align: center;" [formGroup]="sixthFormGroup">
+      <ng-template matStepLabel>Done</ng-template><br>
+      <mat-card>
+        <mat-label>I agree and verify all the questions are answered honestly and best to my knowledge. I agree that typing my name is legally binding and equivalent to my handwritten signature. </mat-label><br>
+        <br>
+        <mat-form-field appearance="outline">
+          <input matInput formControlName="agree" maxlength="500" required>
+          <mat-error *ngIf="sixthFormGroup.controls['agree'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+        <br>
+        <div>
+          <mat-checkbox formControlName="check" [(ngModel)]="checked" required><b>I Agree </b></mat-checkbox><font color=red>*</font>
+        </div>
+      </mat-card>
+      <br>
+      <div class="button-row">
+        <button mat-raised-button color="warn" matStepperPrevious><mat-icon>arrow_back_ios</mat-icon> BACK</button>
+        <button mat-raised-button color="warn" [disabled]="(!checked)" (click)="submit()">SUBMIT <mat-icon>task_alt</mat-icon></button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step> -->
+</mat-horizontal-stepper>
