@@ -757,7 +757,7 @@
         <br>
         <tr>
           <div class="add-bottom-padding">
-            <mat-label>39. Are you or any of your family members employed by Fairfax EggBank, Genetics & IVF institute, or a contracted facility? </mat-label><font color=red>*</font><br><br>
+            <mat-label>39. Are you or any of your family members employed by Lucina EggBank, Genetics & IVF institute, or a contracted facility? </mat-label><font color=red>*</font><br><br>
             <mat-radio-group formControlName="family_employed" required>
                 <mat-radio-button class="add-right-padding" value="Yes">Yes</mat-radio-button>
                 <mat-radio-button class="add-right-padding" value="No">No</mat-radio-button>
@@ -965,7 +965,7 @@
           <br>
           <mat-label><font color=red>Please upload at least 5 photos to complete the application</font></mat-label><br><br>
           <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple>
-          <img *ngFor="let url of urls" [src]="url" width="200px" height="150px">
+          <img *ngFor="let url of urls" [src]="url" height="200px" alt="">
           <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
         </div>
         <br>
@@ -979,7 +979,7 @@
           <br>
           <mat-label><font color=red>Please upload at least 1 video to complete the application</font></mat-label><br><br>
           <input style="display: none;" type="file" accept="video/*" formControlName="videoUrl" #videoUpload (change)="selectVideos($event)">
-          <img *ngFor="let Vurl of Vurls" [src]="Vurl" width="200px" height="150px">
+          <video *ngFor="let Vurl of Vurls" [src]="Vurl" height="200" controls></video>
           <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
         </div>
         <br>

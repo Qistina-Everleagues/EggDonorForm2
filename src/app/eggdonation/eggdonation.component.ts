@@ -157,8 +157,8 @@ export class EggdonationComponent implements OnInit {
       history_abuse: ['', Validators.required]
     });
     this.fifthFormGroup = this._formBuilder.group({
-      imageUrl: ['', Validators.required],
-      videoUrl: ['', Validators.required]
+      imageUrl: [''],
+      videoUrl: ['']
     });
     this.sixthFormGroup = this._formBuilder.group({
       agree: ['', Validators.required],
@@ -174,10 +174,10 @@ export class EggdonationComponent implements OnInit {
   selectPhotos(event: any) {
     if (event.target.files) {
       for (var i = 0; i < File.length; i++) {
-        const reader = new FileReader();
+        var reader = new FileReader();
         reader.readAsDataURL(event.target.files[i]);
-        reader.onload = (e: any) => {
-          this.urls.push(e.target.resut);
+        reader.onload = (event: any) => {
+          this.urls.push(event.target.result);
         }
       }
     }
@@ -186,10 +186,10 @@ export class EggdonationComponent implements OnInit {
   selectVideos(event: any) {
     if (event.target.files) {
       for (var i = 0; i < File.length; i++) {
-        const reader = new FileReader();
+        var reader = new FileReader();
         reader.readAsDataURL(event.target.files[i]);
         reader.onload = (event: any) => {
-          this.Vurls.push(event.target.resut);
+          this.Vurls.push(event.target.result);
         }
       }
     }
