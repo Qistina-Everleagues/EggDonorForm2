@@ -13,7 +13,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EggdonationComponent implements OnInit {
   checked = false;
-  isLinear = true;
+  isLinear = false;
   TotalRow: number;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -276,8 +276,6 @@ export class EggdonationComponent implements OnInit {
     });
   }
 
-  imgSrc: String = 'https://ibb.co/SVnhkRb';
-  vidSrc: String = 'https://ibb.co/X4927X0';
   urls = [];
   Vurls = [];
 

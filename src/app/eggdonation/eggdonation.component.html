@@ -983,7 +983,7 @@
           <li>The more the merrier! Our statistics suggests that more high-quality photos can increase the <b>premium</b> significantly!</li>
         </ul>
         <div style="text-align: center;">
-          <img [src]="imgSrc" width="250px" height="130px" (click)="photoUpload.click()">
+          <img src="https://i.ibb.co/2ctDzgx/Upload-photos.png" width="250px" height="130px" (click)="photoUpload.click()">
           <br>
           <mat-label><font color=red><b>Please upload at least 5 photos to complete the application</b></font></mat-label><br><br>
           <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple required>
@@ -997,7 +997,7 @@
           <li>Note: Video is optional.</li>
         </ul>
         <div style="text-align: center;">
-          <img [src]="vidSrc" width="250px" height="130px" (click)="videoUpload.click()">
+          <img src="https://i.ibb.co/8BJKrMv/Upload-video.png" width="250px" height="130px" (click)="videoUpload.click()">
           <br>
           <mat-label><font color=red><b>Please upload at least 1 video to complete the application</b></font></mat-label><br><br>
           <input style="display: none;" type="file" accept="video/*" formControlName="videoUrl" #videoUpload (change)="selectVideos($event)" required>
