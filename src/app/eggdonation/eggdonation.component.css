@@ -1,6 +1,5 @@
 #table {
     font-family: "Roboto", "Helvetica Neue", sans-serif;
-    text-align: center;
     border-collapse: collapse;
     width: 100%;
 }
@@ -61,4 +60,9 @@
 
 .mat-stepper-horizontal {
     margin-top: 8px;
+}
+
+.table-height {
+    height: 290px;
+    resize: none;
 }
