@@ -13,7 +13,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EggdonationComponent implements OnInit {
   checked = false;
-  isLinear = false;
+  isLinear = true;
   TotalRow: number;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
