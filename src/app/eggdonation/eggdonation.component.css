@@ -6,6 +6,7 @@
 }
   
 #table td, #table th {
+    width: 200px;
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -22,6 +23,31 @@
     color: white;
 }
 
+#table1 {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#table1 td, #table1 th {
+    width: 195px;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#table1 tr:nth-child(even){background-color: #f2f2f2;}
+  
+#table1 tr:hover {background-color: #ddd;}
+  
+#table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
 .add-margin-left {
     font-size: 16px;
     width: 700px;
@@ -31,4 +57,8 @@
 .mat-form-field.mat-form-field {
     font-size: 16px;
     width: 700px;
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
 }

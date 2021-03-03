@@ -4,10 +4,10 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Self and Family</ng-template>
       <p style="text-align: center;">Please fill in your family members before moving onto the next section of the application.</p>
-      <table style="width: 1450px;" id="table">
+      <table id="table">
         <tr>
           <th>Relation</th>
-          <th>Current Age or Age Death</th>
+          <th>Current Age or Age at Death</th>
           <th>Living or Deceased</th>
           <th>Cause of Death</th>
           <th>Ethnic Origin</th>
@@ -23,22 +23,20 @@
           <td><input matInput formControlName="self_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="self_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="self_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="self_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="self_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="self_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -49,22 +47,20 @@
           <td><input matInput formControlName="father_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="father_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="father_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="father_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="father_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="father_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -75,22 +71,20 @@
           <td><input matInput formControlName="mother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="mother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="mother_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="mother_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="mother_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="mother_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -101,22 +95,20 @@
           <td><input matInput formControlName="maternal_grandfather_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandfather_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandfather_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="maternal_grandfather_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="maternal_grandfather_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandfather_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -127,22 +119,20 @@
           <td><input matInput formControlName="maternal_grandmother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandmother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandmother_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="maternal_grandmother_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="maternal_grandmother_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="maternal_grandmother_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -153,22 +143,20 @@
           <td><input matInput formControlName="paternal_grandfather_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandfather_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandfather_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="paternal_grandfather_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="paternal_grandfather_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandfather_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -179,22 +167,20 @@
           <td><input matInput formControlName="paternal_grandmother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandmother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandmother_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="paternal_grandmother_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="paternal_grandmother_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="paternal_grandmother_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -205,22 +191,20 @@
           <td><input matInput formControlName="sibling1_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling1_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling1_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="sibling1_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="sibling1_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling1_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
         <tr>
@@ -231,57 +215,95 @@
           <td><input matInput formControlName="sibling2_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling2_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling2_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="sibling2_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
+          <td style="text-align: justify;">
+            <mat-checkbox formControlName="sibling2_medic_N_A">N/A</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Blood">Blood</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Heart">Heart</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Respiratory">Respiratory</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Metabolic">Metabolic</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Urinary">Urinary</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Reproductive">Reproductive</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Neurological">Neurological</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Mental_Health">Mental Health</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+            <mat-checkbox formControlName="sibling2_medic_Others">Others</mat-checkbox><br>
           </td>
         </tr>
-        <tr>
-          <th>Add More Sibling</th>
-          <td><input matInput formControlName="more_sibling_age" maxlength="500" required></td>
-          <td><input matInput formControlName="more_sibling_living" maxlength="500" required></td>
-          <td><input matInput formControlName="more_sibling_cause" maxlength="500" required></td>
-          <td><input matInput formControlName="more_sibling_ethnic" maxlength="500" required></td>
-          <td><input matInput formControlName="more_sibling_genetic" maxlength="500" required></td>
-          <td><input matInput formControlName="more_sibling_history" maxlength="500" required></td>
-          <td>
-            <mat-select formControlName="more_sibling_medic" required>
-              <mat-option value="N/A">N/A</mat-option>
-              <mat-option value="Blood">Blood</mat-option>
-              <mat-option value="Heart">Heart</mat-option>
-              <mat-option value="Respiratory">Respiratory</mat-option>
-              <mat-option value="Gastrointestinal">Gastrointestinal</mat-option>
-              <mat-option value="Metabolic">Metabolic</mat-option>
-              <mat-option value="Urinary">Urinary</mat-option>
-              <mat-option value="Reproductive">Reproductive</mat-option>
-              <mat-option value="Neurological">Neurological</mat-option>
-              <mat-option value="Mental Health">Mental Health</mat-option>
-              <mat-option value="Muscle/Bone/Joint">Muscle/Bone/Joint</mat-option>
-              <mat-option value="Skin Condition">Skin Condition</mat-option>
-              <mat-option value="Others">Others</mat-option>
-            </mat-select>
-          </td>
-        </tr>
+        <!-- <tr formGroupName="list_siblings">
+          <ng-container *ngIf="firstFormGroup.controls.list_siblings!=null">
+            <div *ngFor="let list_sibling of firstFormGroup.controls.list_siblings.controls; let i=index" [formGroupName]="i">
+              <td><input matInput formControlName="add" maxlength="500" placeholder="Add More Sibling"></td>
+              <td><input matInput formControlName="age" maxlength="500"></td>
+              <td><input matInput formControlName="living" maxlength="500"></td>
+              <td><input matInput formControlName="cause" maxlength="500"></td>
+              <td><input matInput formControlName="ethnic" maxlength="500"></td>
+              <td><input matInput formControlName="genetic" maxlength="500"></td>
+              <td><input matInput formControlName="history" maxlength="500"></td>
+              <td style="text-align: justify;">
+                <mat-checkbox formControlName="sibling_medic_N_A">N/A</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Blood">Blood</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Heart">Heart</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Respiratory">Respiratory</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Metabolic">Metabolic</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Urinary">Urinary</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Reproductive">Reproductive</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Neurological">Neurological</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Mental_Health">Mental Health</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+                <mat-checkbox formControlName="sibling_medic_Others">Others</mat-checkbox><br>
+              </td>
+              <td><button class="small-button" mat-raised-button color="warn" maxlength="500" (click)="deleteRow(i)">X</button></td>
+            </div>
+          </ng-container>
+        </tr> -->
       </table>
+      <div [formGroup]="siblingsFormGroup">
+        <table id="table1" formGroupName="list_siblings">
+          <ng-container *ngIf="siblingsFormGroup.controls.list_siblings!=null">
+            <div *ngFor="let list_sibling of siblingsFormGroup.controls.list_siblings.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><b><input matInput formControlName="add" maxlength="500" placeholder="Add More Siblings"></b></td>
+                <td><input matInput formControlName="age" maxlength="500"></td>
+                <td><input matInput formControlName="living" maxlength="500"></td>
+                <td><input matInput formControlName="cause" maxlength="500"></td>
+                <td><input matInput formControlName="ethnic" maxlength="500"></td>
+                <td><input matInput formControlName="genetic" maxlength="500"></td>
+                <td><input matInput formControlName="history" maxlength="500"></td>
+                <td style="text-align: justify;">
+                  <mat-checkbox formControlName="sibling_medic_N_A">N/A</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Blood">Blood</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Heart">Heart</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Respiratory">Respiratory</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Gastrointestinal">Gastrointestinal</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Metabolic">Metabolic</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Urinary">Urinary</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Reproductive">Reproductive</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Neurological">Neurological</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Mental_Health">Mental Health</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
+                  <mat-checkbox formControlName="sibling_medic_Others">Others</mat-checkbox><br>
+            </td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="warn" class="large-button" (click)="addNewRow()">Add More Siblings <mat-icon>add_box</mat-icon></button>
+      </div>
       <br>
+      <!-- <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow()">Add More</button>
+      <br> -->
       <p>
         Notes: <br>
-        1. If you don't know the answer to certain questions, please select N/A. <br>
-        2. If you select any medical for yourself or your close family members, please explain here. <br>
-        3. Explain if the person deceased at the age of 65 or younger.
+        1. If you don't know the answer to certain questions, please fill in N/A. <br>
+        2. If you select any medical conditions for yourself or your close family members, please explain here. <br>
+        3. Explain if a family member passed away at the age of 65 or younger.
       </p>
       <br>
       <mat-label>Please explain: </mat-label><br>
@@ -298,7 +320,7 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>FDA</ng-template>
+      <ng-template matStepLabel>FDA Questions</ng-template>
       <table>
         <tr>
           <div class="add-bottom-padding">
@@ -869,16 +891,16 @@
         <mat-error *ngIf="thirdFormGroup.controls['personal_goal'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>4. Please highlight your achievement academically/in musical field/sports/social skill/leadership/Other talents. </mat-label><font color=red>*</font><br>
+      <mat-label>4. Please highlight your achievements in academics/music/sports, and any leadership/social skills and other talents. </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
-        <mat-label>Please highlight your achievement academically/in musical field/sports/social skill/leadership/Other talents</mat-label>
+        <mat-label>Please highlight your achievements in academics/music/sports, and any leadership/social skills and other talents</mat-label>
         <textarea matInput formControlName="achievement" maxlength="5000"></textarea>
         <mat-error *ngIf="thirdFormGroup.controls['achievement'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>5. Have you helped people in your neighbourhood/community? Tell us more. </mat-label><font color=red>*</font><br>
+      <mat-label>5. Have you helped people in your neighborhood/community? Tell us more. </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
-        <mat-label>Have you helped people in your neighbourhood/community? Tell us more</mat-label>
+        <mat-label>Have you helped people in your neighborhood/community? Tell us more</mat-label>
         <textarea matInput formControlName="helped_community" maxlength="5000"></textarea>
         <mat-error *ngIf="thirdFormGroup.controls['helped_community'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
@@ -963,8 +985,8 @@
         <div style="text-align: center;">
           <img [src]="imgSrc" width="250px" height="130px" (click)="photoUpload.click()">
           <br>
-          <mat-label><font color=red>Please upload at least 5 photos to complete the application</font></mat-label><br><br>
-          <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple>
+          <mat-label><font color=red><b>Please upload at least 5 photos to complete the application</b></font></mat-label><br><br>
+          <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple required>
           <img *ngFor="let url of urls" [src]="url" height="200px" alt="">
           <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
         </div>
@@ -977,8 +999,8 @@
         <div style="text-align: center;">
           <img [src]="vidSrc" width="250px" height="130px" (click)="videoUpload.click()">
           <br>
-          <mat-label><font color=red>Please upload at least 1 video to complete the application</font></mat-label><br><br>
-          <input style="display: none;" type="file" accept="video/*" formControlName="videoUrl" #videoUpload (change)="selectVideos($event)">
+          <mat-label><font color=red><b>Please upload at least 1 video to complete the application</b></font></mat-label><br><br>
+          <input style="display: none;" type="file" accept="video/*" formControlName="videoUrl" #videoUpload (change)="selectVideos($event)" required>
           <video *ngFor="let Vurl of Vurls" [src]="Vurl" height="200" controls></video>
           <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
         </div>
