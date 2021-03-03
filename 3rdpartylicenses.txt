@@ -293,21 +293,17 @@ MIT
 
 @angular/material/datepicker
 
+@angular/material/checkbox
+
 @angular/material/icon
 
 @angular/material/stepper
-
-@angular/material/select
-
-@angular/material/core
 
 @angular/material/form-field
 
 @angular/material/radio
 
 @angular/material/card
-
-@angular/material/checkbox
 
 zone.js
 MIT
