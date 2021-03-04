@@ -1,4 +1,14 @@
 <p style="text-align: center;"><b>The whole application process contains 5 sections and should take about 30-45 minutes. A great journey awaits you!</b></p>
+<mat-card class="card">
+  <mat-card-content>
+    <section class="progress-section">
+      <mat-progress-bar
+        class="progress" mode="determinate"
+        value="20">
+      </mat-progress-bar>20%
+    </section>
+  </mat-card-content>
+</mat-card>
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
@@ -17,13 +27,18 @@
         </tr>
         <tr>
           <th>Self</th>
-          <td><textarea matInput class="table-height" formControlName="self_age" maxlength="500" required></textarea></td>
+          <td><input matInput formControlName="self_age" maxlength="500" required></td>
           <td><input matInput formControlName="self_living" maxlength="500" required></td>
           <td><input matInput formControlName="self_cause" maxlength="500" required></td>
           <td><input matInput formControlName="self_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="self_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="self_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="self_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="self_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="self_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="self_medic_Heart">Heart</mat-checkbox><br>
@@ -37,7 +52,7 @@
             <mat-checkbox formControlName="self_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="self_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="self_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Father</th>
@@ -47,7 +62,12 @@
           <td><input matInput formControlName="father_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="father_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="father_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="father_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="father_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="father_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="father_medic_Heart">Heart</mat-checkbox><br>
@@ -61,7 +81,7 @@
             <mat-checkbox formControlName="father_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="father_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="father_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Mother</th>
@@ -71,7 +91,12 @@
           <td><input matInput formControlName="mother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="mother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="mother_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="mother_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="mother_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="mother_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="mother_medic_Heart">Heart</mat-checkbox><br>
@@ -85,7 +110,7 @@
             <mat-checkbox formControlName="mother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="mother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="mother_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Maternal Grandfather</th>
@@ -95,7 +120,12 @@
           <td><input matInput formControlName="maternal_grandfather_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandfather_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandfather_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="maternal_grandfather_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="maternal_grandfather_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandfather_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandfather_medic_Heart">Heart</mat-checkbox><br>
@@ -109,7 +139,7 @@
             <mat-checkbox formControlName="maternal_grandfather_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandfather_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandfather_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Maternal Grandmother</th>
@@ -119,7 +149,12 @@
           <td><input matInput formControlName="maternal_grandmother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandmother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="maternal_grandmother_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="maternal_grandmother_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="maternal_grandmother_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandmother_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandmother_medic_Heart">Heart</mat-checkbox><br>
@@ -133,7 +168,7 @@
             <mat-checkbox formControlName="maternal_grandmother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandmother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="maternal_grandmother_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Paternal Grandfather</th>
@@ -143,7 +178,12 @@
           <td><input matInput formControlName="paternal_grandfather_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandfather_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandfather_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="paternal_grandfather_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="paternal_grandfather_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandfather_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandfather_medic_Heart">Heart</mat-checkbox><br>
@@ -157,7 +197,7 @@
             <mat-checkbox formControlName="paternal_grandfather_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandfather_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandfather_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Paternal Grandmother</th>
@@ -167,7 +207,12 @@
           <td><input matInput formControlName="paternal_grandmother_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandmother_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="paternal_grandmother_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="paternal_grandmother_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="paternal_grandmother_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandmother_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandmother_medic_Heart">Heart</mat-checkbox><br>
@@ -181,7 +226,7 @@
             <mat-checkbox formControlName="paternal_grandmother_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandmother_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="paternal_grandmother_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Sibling 1</th>
@@ -191,7 +236,12 @@
           <td><input matInput formControlName="sibling1_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling1_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling1_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="sibling1_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="sibling1_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="sibling1_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="sibling1_medic_Heart">Heart</mat-checkbox><br>
@@ -205,7 +255,7 @@
             <mat-checkbox formControlName="sibling1_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="sibling1_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="sibling1_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <tr>
           <th>Sibling 2</th>
@@ -215,7 +265,12 @@
           <td><input matInput formControlName="sibling2_ethnic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling2_genetic" maxlength="500" required></td>
           <td><input matInput formControlName="sibling2_history" maxlength="500" required></td>
-          <td style="text-align: justify;">
+          <td>
+            <mat-select formControlName="sibling2_medic" multiple>
+              <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+            </mat-select>
+          </td>
+          <!-- <td style="text-align: justify;">
             <mat-checkbox formControlName="sibling2_medic_N_A">N/A</mat-checkbox><br>
             <mat-checkbox formControlName="sibling2_medic_Blood">Blood</mat-checkbox><br>
             <mat-checkbox formControlName="sibling2_medic_Heart">Heart</mat-checkbox><br>
@@ -229,7 +284,7 @@
             <mat-checkbox formControlName="sibling2_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
             <mat-checkbox formControlName="sibling2_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
             <mat-checkbox formControlName="sibling2_medic_Others">Others</mat-checkbox><br>
-          </td>
+          </td> -->
         </tr>
         <!-- <tr formGroupName="list_siblings">
           <ng-container *ngIf="firstFormGroup.controls.list_siblings!=null">
@@ -262,7 +317,7 @@
         </tr> -->
       </table>
       <div [formGroup]="siblingsFormGroup">
-        <table id="table1" formGroupName="list_siblings">
+        <table id="table" formGroupName="list_siblings">
           <ng-container *ngIf="siblingsFormGroup.controls.list_siblings!=null">
             <div *ngFor="let list_sibling of siblingsFormGroup.controls.list_siblings.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -273,7 +328,12 @@
                 <td><input matInput formControlName="ethnic" maxlength="500"></td>
                 <td><input matInput formControlName="genetic" maxlength="500"></td>
                 <td><input matInput formControlName="history" maxlength="500"></td>
-                <td style="text-align: justify;">
+                <td>
+                  <mat-select formControlName="sibling_medic" multiple>
+                    <mat-option *ngFor="let medic of medics" [value]="medic">{{medic}}</mat-option>
+                  </mat-select>
+                </td>
+                <!-- <td style="text-align: justify;">
                   <mat-checkbox formControlName="sibling_medic_N_A">N/A</mat-checkbox><br>
                   <mat-checkbox formControlName="sibling_medic_Blood">Blood</mat-checkbox><br>
                   <mat-checkbox formControlName="sibling_medic_Heart">Heart</mat-checkbox><br>
@@ -287,7 +347,7 @@
                   <mat-checkbox formControlName="sibling_medic_Muscle">Muscle/Bone/Joint</mat-checkbox><br>
                   <mat-checkbox formControlName="sibling_medic_Skin_Condition">Skin Condition</mat-checkbox><br>
                   <mat-checkbox formControlName="sibling_medic_Others">Others</mat-checkbox><br>
-            </td>
+                </td> -->
               </tr>
             </div>
           </ng-container>
@@ -917,49 +977,49 @@
       <ng-template matStepLabel>Psychological Evaluation</ng-template>
       <p style="text-align: center;">This is the last part of the questionnaire! We just want to make sure you have thought it through. This section usually takes about up to 10 min to complete.</p>
       <br>
-      <mat-label>1. Are you comfortable with anonymous egg donation? </mat-label><font color=red>*</font><br>
+      <!-- <mat-label>1. Are you comfortable with anonymous egg donation? </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>Are you comfortable with anonymous egg donation?</mat-label>
         <textarea matInput formControlName="anonymous_donation" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['anonymous_donation'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
-      <br>
-      <mat-label>2. Do you understand that as an egg donor you will pass a portion of your genetic material to a child (while remaining anonymous)? Are you comfortable with this? </mat-label><font color=red>*</font><br>
+      <br> -->
+      <mat-label>1. Do you understand that as an egg donor you will pass a portion of your genetic material to a child (while remaining anonymous)? Are you comfortable with this? </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>Do you understand that as an egg donor you will pass a portion of your genetic material to a child (while remaining anonymous)? Are you comfortable with this?</mat-label>
         <textarea matInput formControlName="understand" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['understand'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>3. How do you feel about families struggling with infertility? </mat-label><font color=red>*</font><br>
+      <mat-label>2. How do you feel about families struggling with infertility? </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>How do you feel about families struggling with infertility?</mat-label>
         <textarea matInput formControlName="families_infertility" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['families_infertility'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>4. If you incur infertility in the future, how would you deal with it? </mat-label><font color=red>*</font><br>
+      <mat-label>3. If you incur infertility in the future, how would you deal with it? </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>If you incur infertility in the future, how would you deal with it?</mat-label>
         <textarea matInput formControlName="deal_infertility" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['deal_infertility'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>5. Describe your personality & social demeanor. </mat-label><font color=red>*</font><br>
+      <mat-label>4. Describe your personality & social demeanor. </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>Describe your personality & social demeanor</mat-label>
         <textarea matInput formControlName="describe_personality" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['describe_personality'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>6. Please share a detailed explanation of you and your family regarding any pertinent psychological information. </mat-label><font color=red>*</font><br>
+      <mat-label>5. Please share a detailed explanation of you and your family regarding any pertinent psychological information. </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>Please share a detailed explanation of you and your family regarding any pertinent psychological information</mat-label>
         <textarea matInput formControlName="explanation_psychological" maxlength="5000"></textarea>
         <mat-error *ngIf="forthFormGroup.controls['explanation_psychological'].errors?.required">This field is required.</mat-error>
       </mat-form-field>
       <br>
-      <mat-label>7. Do you or your immediate family members have a history of abuse (sexual/physical/mental abuse) or mental illness that would prevent you from becoming an egg donor. If so, please describe. </mat-label><font color=red>*</font><br>
+      <mat-label>6. Do you or your immediate family members have a history of abuse (sexual/physical/mental abuse) or mental illness that would prevent you from becoming an egg donor. If so, please describe. </mat-label><font color=red>*</font><br>
       <mat-form-field class="add-margin-left" appearance="outline">
         <mat-label>Do you or your immediate family members have a history of abuse (sexual/physical/mental abuse) or mental illness that would prevent you from becoming an egg donor. If so, please describe</mat-label>
         <textarea matInput formControlName="history_abuse" maxlength="5000"></textarea>
@@ -985,7 +1045,7 @@
         <div style="text-align: center;">
           <img src="https://i.ibb.co/2ctDzgx/Upload-photos.png" width="250px" height="130px" (click)="photoUpload.click()">
           <br>
-          <mat-label><font color=red><b>Please upload at least 5 photos to complete the application</b></font></mat-label><br><br>
+          <mat-label><font color=red><b>Please upload at least 3 photos to complete the application. The more photos, the merrier!</b></font></mat-label><br><br>
           <input style="display: none;" type="file" accept="image/*" formControlName="imageUrl" #photoUpload (change)="selectPhotos($event)" multiple required>
           <img *ngFor="let url of urls" [src]="url" height="200px" alt="">
           <!-- <button mat-raised-button color="primary" type="button" (click)="UploadPhotos(fifthFormGroup.value)">Upload <mat-icon>upload</mat-icon></button> -->
