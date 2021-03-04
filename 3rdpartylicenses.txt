@@ -293,7 +293,13 @@ MIT
 
 @angular/material/datepicker
 
-@angular/material/checkbox
+@angular/material/core
+
+@angular/material/select
+
+@angular/material/card
+
+@angular/material/progress-bar
 
 @angular/material/icon
 
@@ -303,7 +309,7 @@ MIT
 
 @angular/material/radio
 
-@angular/material/card
+@angular/material/checkbox
 
 zone.js
 MIT
